@@ -22,7 +22,7 @@ public class StockRMIClientPriceUpdate {
         }
         
         System.out.println("Enter stock symbol and price or ! to quit.");
-        while(!(txt=sc.nextLine()).equals("!")){
+        while(!"!".equals((txt=sc.nextLine()))){
             data = txt.split(" ");
             stockSym = data[0];
             price = Double.parseDouble(data[1]);

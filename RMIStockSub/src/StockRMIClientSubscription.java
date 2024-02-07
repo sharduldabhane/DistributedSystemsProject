@@ -32,12 +32,12 @@ public class StockRMIClientSubscription {
             e.printStackTrace();
         }
         
-        while(!(txt=sc.nextLine()).equals("!")){
+        while(!"!".equals((txt=sc.nextLine()))){
             data = txt.split(" ");
             sub_key = data[0];
             stockSym = data[1];
             try{
-                if(sub_key.equals("S"))
+                if("S".equals(sub_key))
                     servant.subscribe(user, stockSym);
                 else
                     servant.unSubscribe(user, stockSym);
